@@ -31,8 +31,8 @@ alias chgrp='chgrp --preserve-root'
 if [ -f /usr/bin/apt ]; then
   alias update='sudo apt update'
   alias upgrade='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo apt clean'
-  #alias install='sudo apt install'
-  #alias remove='sudo apt purge'
+  alias install='sudo apt install'
+  alias remove='sudo apt purge'
 fi
 
 #alias gurulandia="nano ~/.gurulandia"
