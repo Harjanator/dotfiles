@@ -17,6 +17,7 @@ alias ports='netstat -tulanp'
 alias rm='rm -iv'
 alias seditor='sudo editor'
 alias snano='sudo editor'
+alias os-release='lsb_release -a'
 
 # Safetynets
 # do not delete / or prompt if deleting more than 3 files at a time #
