@@ -12,6 +12,7 @@ alias del='rm'
 alias df='df -h -x squashfs -x tmpfs -x devtmpfs'
 alias go="goto"
 alias ls='ls -lhF --color=auto --human-readable --time-style=long-iso --classify'
+#alias ls='ls -al --color'
 alias move="mv"
 alias ports='netstat -tulanp'
 alias rm='rm -iv'
@@ -29,12 +30,12 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
 # Package management
-if [ -f /usr/bin/apt ]; then
-  alias update='sudo apt update'
-  alias upgrade='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo apt clean'
-  alias install='sudo apt install'
-  alias remove='sudo apt purge'
-fi
+#if [ -f /usr/bin/apt ]; then
+#  alias update='sudo apt update'
+#  alias upgrade='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo apt clean'
+#  alias install='sudo apt install'
+#  alias remove='sudo apt purge'
+#fi
 
 #alias gurulandia="nano ~/.gurulandia"
 alias known_hosts='editor ~/.ssh/known_hosts'
