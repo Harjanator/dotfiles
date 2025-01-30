@@ -1,30 +1,7 @@
-[[ -f ~/.zsh/prequisites/HomeBrew.zsh ]] && source ~/.zsh/prequisites/HomeBrew.zsh # Load HomeBrew
-[[ -f ~/.zsh/prequisites/fzf.zsh ]] && source ~/.zsh/prequisites/fzf.zsh # Load fzf
-[[ -f ~/.zsh/prequisites/zoxide.zsh ]] && source ~/.zsh/prequisites/zoxide.zsh # Load zoxide
-[[ -f ~/.zsh/prequisites/oh-my-posh.zsh ]] && source ~/.zsh/prequisites/oh-my-posh.zsh # Load zoxide
+# Check Prequisites
+[[ -f ~/.zsh/prequisites.zsh ]] && source ~/.zsh/prequisites.zsh
 
-#if [ ! -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
-#	echo "Install HomeBrew"
-#	/bin/bash -c "$(curl -fsSL http://192.168.5.30:53006/Gurulandia/Homelab/raw/branch/main/setup/homebrew_install.sh)"
-#fi
-#if [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
-#	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-#fi
-
-#if [ ! -f "/home/linuxbrew/.linuxbrew/bin/fzf" ]; then
-#	echo "Install fzf"
-#	brew install fzf
-#fi
-
-#if [ ! -f "/home/linuxbrew/.linuxbrew/bin/zoxide" ]; then
-#	echo "Install zoxide"
-#	brew install zoxide
-#fi
-
-#if [ ! -f "/home/linuxbrew/.linuxbrew/bin/oh-my-posh" ]; then
-#	echo "Install oh-my-posh"
-#	brew install jandedobbeleer/oh-my-posh/oh-my-posh
-#fi
+# [[ -f ~/.zsh/gurulandia.zsh ]] && source ~/.zsh/gurulandia.zsh
 
 # Set the directory we want to store zinit and plugins
 #ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -37,8 +14,6 @@
 
 # Source/Load zinit
 #source "${ZINIT_HOME}/zinit.zsh"
-
-[[ -f ~/.zsh/prequisites/zinit.zsh ]] && source ~/.zsh/prequisites/zinit.zsh # Load zinit
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
