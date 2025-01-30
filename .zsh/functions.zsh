@@ -48,18 +48,21 @@ top10() {
 }
 
 myip() {
-    local ip=$(curl http://ifconfig.me/ip)
+    local ip=$(curl -s http://ifconfig.me/ip)
     echo $ip
 }
 
 #netinfo - shows network information for your system
 netinfo () {
     echo "--------------- Network Information ---------------"
-    /sbin/ifconfig | awk /'inet addr/ {print $2}'
-    /sbin/ifconfig | awk /'Bcast/ {print $3}'
-    /sbin/ifconfig | awk /'inet addr/ {print $4}'
-    /sbin/ifconfig | awk /'HWaddr/ {print $4,$5}'
-    echo "${myip()}"
+#    /sbin/ifconfig | awk /'inet addr/ {print $2}'
+#    /sbin/ifconfig | awk /'Bcast/ {print $3}'
+#    /sbin/ifconfig | awk /'inet addr/ {print $4}'
+#    /sbin/ifconfig | awk /'HWaddr/ {print $4,$5}'
+#    echo "${myip()}"
+    /sbin/ifconfig | awk /'inet / {print $2, $3, $4, $5, $6}'
+    /sbin/ifconfig | awk /'ether/ {print $2}'
+    myip
     echo "---------------------------------------------------"
 }
 
@@ -68,9 +71,9 @@ showpkg () {
     return;
 }
 
-install(){
-  sudo apt-get install -y $1
-}
+#install(){
+#  sudo apt-get install -y $1
+#}
 
 uninstall(){
   sudo apt-get remove --purge -y $1
