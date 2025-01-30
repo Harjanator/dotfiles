@@ -27,6 +27,7 @@ zinit wait lucid for MichaelAquilina/zsh-autoswitch-virtualenv
 # Add in snippets
 if [ -f /usr/bin/git ] ; then
 	zinit snippet OMZL::git.zsh && zinit snippet OMZP::git
+	# zinit snippet OMZ::plugins/git/git.plugin.zsh
 fi
 if [ -f /usr/bin/sudo ] ; then
 	zinit snippet OMZP::sudo
@@ -40,7 +41,6 @@ if [ -f /usr/bin/docker ] ; then
 	fi
 	zinit snippet OMZP::docker && zinit snippet OMZP::docker-compose
 fi
-zinit snippet OMZ::plugins/git/git.plugin.zsh
 #zinit snippet OMZP::helm
 apt_pref='apt'
 apt_upgr='full-upgrade'
