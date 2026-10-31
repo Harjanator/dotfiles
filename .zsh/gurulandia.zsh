@@ -14,6 +14,7 @@ fi
 [[ -f ~/.zsh/gl-prompt.zsh ]] && source ~/.zsh/gl-prompt.zsh # Set Prompt
 [[ -f ~/.zsh/gl-bindkey.zsh ]] && source ~/.zsh/gl-bindkey.zsh # Load Bindkey
 [[ -f ~/.zsh/history.zsh ]] && source ~/.zsh/history.zsh # Load History
+[[ -f ~/.zsh/exports.zsh ]] && source ~/.zsh/exports.zsh # Load Exports
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh # Load Aliases
 if [ ! -d "/etc/nixos" ]; then
 	[[ -f ~/.zsh/gl-integrations.zsh ]] && source ~/.zsh/gl-integrations.zsh # Load Integrations
@@ -22,8 +23,6 @@ fi
 
 #[[ -f ~/.zsh/plugins.zsh ]] && source ~/.zsh/plugins.zsh # Plugins
 #[[ -f ~/.zsh/snippets.zsh ]] && source ~/.zsh/snippets.zsh # Snippets
-
-#[[ -f ~/.zsh/exports.zsh ]] && source ~/.zsh/exports.zsh # Load Exports
 
 
 #[[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh # Load Functions
