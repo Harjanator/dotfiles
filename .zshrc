@@ -114,5 +114,6 @@
 # eval "$(zoxide init --cmd cd zsh)"
 # c
 #hyfetch
-git clone https://gitea.gurulandia.fi/Gurulandia/dotfiles.git
+#git clone https://gitea.gurulandia.fi/Gurulandia/dotfiles.git
+git clone https://github.com/Harjanator/dotfiles.git
 cd ~/dotfiles
