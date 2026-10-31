@@ -17,7 +17,7 @@ zinit snippet OMZP::docker-compose
 #zinit snippet OMZP::kubectl
 #zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
-zinit snippet OMZP::genpass
+#zinit snippet OMZP::genpass
 #zinit snippet OMZP::aliases
 #zinit snippet OMZP::systemd
 #zinit snippet OMZP::ufw
