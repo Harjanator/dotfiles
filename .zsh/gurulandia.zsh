@@ -17,7 +17,6 @@ fi
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh # Load Aliases
 if [ ! -d "/etc/nixos" ]; then
 	[[ -f ~/.zsh/gl-integrations.zsh ]] && source ~/.zsh/gl-integrations.zsh # Load Integrations
-	fi
 fi
 
 
