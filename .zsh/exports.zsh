@@ -1,5 +1,5 @@
 echo 'Load Exports'
-export vscode_dir=/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin 
+#export vscode_dir=/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin 
 #export PATH=/home/guru/.local/bin:$vscode_dir:$PATH
 export VISUAL="nano"
 export EDITOR="nano"
