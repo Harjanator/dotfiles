@@ -20,11 +20,6 @@ if [ ! -d "/etc/nixos" ]; then
 	[[ -f ~/.zsh/gl-integrations.zsh ]] && source ~/.zsh/gl-integrations.zsh # Load Integrations
 fi
 
-
-#[[ -f ~/.zsh/plugins.zsh ]] && source ~/.zsh/plugins.zsh # Plugins
-#[[ -f ~/.zsh/snippets.zsh ]] && source ~/.zsh/snippets.zsh # Snippets
-
-
 #[[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh # Load Functions
 #[[ -f ~/.zsh/mounts.zsh ]] && source ~/.zsh/mounts.zsh # Load Mounts
 #[[ -f ~/.zsh/path.zsh ]] && source ~/.zsh/path.zsh # Set Path
