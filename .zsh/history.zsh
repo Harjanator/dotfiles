@@ -1,6 +1,6 @@
 echo 'Set history settings'
 # Set history file
-HISTFILE=~/.zhistory
+HISTFILE=~/.zsh_history
 
 # Set history size
 HISTSIZE=1000
@@ -38,6 +38,6 @@ setopt hist_reduce_blanks
 # This means that the history command will show recent entries, even between terminal sessions
 setopt share_history
 
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
+#setopt hist_save_no_dups
+#setopt hist_ignore_dups
+#setopt hist_find_no_dups
