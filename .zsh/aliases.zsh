@@ -38,7 +38,7 @@ if [ -f /usr/bin/apt ]; then
 fi
 
 #alias gurulandia="nano ~/.gurulandia"
-alias known_hosts='editor ~/.ssh/known_hosts'
+alias known_hosts='$EDITOR ~/.ssh/known_hosts'
 #alias reload='source ~/zsh/gurulandia.zsh'
 
 # Ansible
