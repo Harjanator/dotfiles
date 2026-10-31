@@ -122,5 +122,5 @@ cd ~/dotfiles
 
 mkdir -p ~/.zsh
 stow .zsh -t ~/.zsh
-cp .zsh/gurulanzia.zsh  ~./zshrc
+cp .zsh/gurulanzia.zsh  ~/.zshrc
 source ~./zshrc
