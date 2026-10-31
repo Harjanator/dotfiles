@@ -16,8 +16,8 @@ alias ls="eza -al --icons"
 alias move="mv"
 alias ports='netstat -tulanp'
 alias rm='rm -iv'
-alias seditor='sudo editor'
-alias snano='sudo editor'
+alias seditor='sudo $EDITOR'
+alias snano='sudo $EDITOR'
 alias os-release='lsb_release -a'
 
 # Safetynets
