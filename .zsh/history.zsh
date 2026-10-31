@@ -37,3 +37,7 @@ setopt hist_reduce_blanks
 # Reads the history file every time history is called
 # This means that the history command will show recent entries, even between terminal sessions
 setopt share_history
+
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups

@@ -1,53 +1,61 @@
-if [ ! -d "/etc/nixos" ]; then
-	if [ ! -f "${HOME}/.zsh/.installed" ]; then
-		source ${HOME}/.zsh/install.zsh
-	else
-		source ${HOME}/.zsh/init-brew.zsh
-	fi
-fi
+#if [ ! -d "/etc/nixos" ]; then
+#	if [ ! -f "${HOME}/.zsh/.installed" ]; then
+#		source ${HOME}/.zsh/install.zsh
+#	else
+#		source ${HOME}/.zsh/init-brew.zsh
+#	fi
+
+#	apt_pref='apt'
+#	apt_upgr='full-upgrade'
+#fi
 
 # Set the directory we want to store zinit and plugins
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+# ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # Download Zinit, if it's not there yet
-if [ ! -d "$ZINIT_HOME" ]; then
-   mkdir -p "$(dirname $ZINIT_HOME)"
-   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-fi
+#if [ ! -d "$ZINIT_HOME" ]; then
+#mkdir -p "$(dirname $ZINIT_HOME)"
+#git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+#fi
 
 # Source/Load zinit
-source "${ZINIT_HOME}/zinit.zsh"
+#source "${ZINIT_HOME}/zinit.zsh"
 
-apt_pref='apt'
-apt_upgr='full-upgrade'
+# export FPATH="$HOME/.local/share/eza/completions/zsh:$FPATH"
 
 # Add in zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
+#source ${HOME}/.zsh/plugins.zsh
+# zinit light zsh-users/zsh-syntax-highlighting
+# zinit light zsh-users/zsh-completions
+# zinit light zsh-users/zsh-autosuggestions
+# zinit light Aloxaf/fzf-tab
+
+# zstyle ':omz:plugins:eza' 'dirs-first' yes
 
 # Add in snippets
-zinit snippet OMZL::git.zsh
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
-zinit snippet OMZP::ansible
-if [ ! -f "~/.cache/zinit/completions/_docker" ]; then
-	mkdir -p ~/.cache/zinit/completions
-	touch ~/.cache/zinit/completions/_docker
-fi
-zinit snippet OMZP::docker
-zinit snippet OMZP::docker-compose
+#source ${HOME}/.zsh/snippets.zsh
+#zinit snippet OMZP::eza
+#zinit snippet OMZL::git.zsh
+#zinit snippet OMZP::git
+#zinit snippet OMZP::sudo
+#zinit snippet OMZP::ansible
+#if [ ! -f "~/.cache/zinit/completions/_docker" ]; then
+#	mkdir -p ~/.cache/zinit/completions
+#	touch ~/.cache/zinit/completions/_docker
+#fi
+#zinit snippet OMZP::docker
+#zinit snippet OMZP::docker-compose
 #zinit snippet OMZP::helm
-zinit snippet OMZP::debian
+#zinit snippet OMZP::debian
 #zinit snippet OMZP::aws
 #zinit snippet OMZP::kubectl
 #zinit snippet OMZP::kubectx
-zinit snippet OMZP::command-not-found
+#zinit snippet OMZP::command-not-found
 #zinit snippet OMZP::aliases
 #zinit snippet OMZP::systemd
 #zinit snippet OMZP::ufw
 #zinit snippet OMZP::miocrok8s
+#zinit snippet OMZP::sops
 #zinit snippet OMZP::ssh
 #zinit snippet OMZP::terraform
 #zinit snippet OMZP::tmux
@@ -55,47 +63,56 @@ zinit snippet OMZP::command-not-found
 #zinit snippet OMZP::gh
 #zinit snippet OMZP::genpass
 #zinit snippet OMZP::pip
-
+#zinit snippet OMZP::brew
+#zinit snippet OMZP::dotenv
+#zinit snippet OMZP::dotnet
 
 # Load completions
-autoload -Uz compinit && compinit
+#autoload -Uz compinit && compinit
 
-zinit cdreplay -q
+# zinit cdreplay -q
 
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+#eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/paradox.omp.json)"
+#eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 #eval "$(oh-my-posh init zsh)"
 
+
 # Keybindings
-bindkey -e
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
-bindkey '^[w' kill-region
+#bindkey -e
+#bindkey '^p' history-search-backward
+#bindkey '^n' history-search-forward
+#bindkey '^[w' kill-region
 
 # History
-HISTSIZE=5000
-HISTFILE=~/.zsh_history
-SAVEHIST=$HISTSIZE
-HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
+#HISTSIZE=5000
+#HISTFILE=~/.zsh_history
+#SAVEHIST=$HISTSIZE
+#HISTDUP=erase
+#setopt appendhistory
+#setopt sharehistory
+#setopt hist_ignore_space
+#setopt hist_ignore_all_dups
+#setopt hist_save_no_dups
+#setopt hist_ignore_dups
+#setopt hist_find_no_dups
 
 # Completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+#zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+#zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+#zstyle ':completion:*' menu no
+#zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+#zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='ls -al --color'
+#alias ls="eza -al --icons"
+#alias ls='ls -al --color'
 #alias vim='nvim'
-alias c='clear'
+#alias c='clear'
 
 # Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+# eval "$(fzf --zsh)"
+# eval "$(zoxide init --cmd cd zsh)"
+# c
+#hyfetch
+git clone https://gitea.gurulandia.fi/Gurulandia/dotfiles.git
+cd ~/dotfiles

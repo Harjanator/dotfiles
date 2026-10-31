@@ -11,7 +11,8 @@ alias cp='cp -iv'
 alias del='rm'
 alias df='df -h -x squashfs -x tmpfs -x devtmpfs'
 alias go="goto"
-alias ls='ls -lhF --color=auto --human-readable --time-style=long-iso --classify'
+#alias ls='ls -lhF --color=auto --human-readable --time-style=long-iso --classify'
+alias ls="eza -al --icons"
 alias move="mv"
 alias ports='netstat -tulanp'
 alias rm='rm -iv'
