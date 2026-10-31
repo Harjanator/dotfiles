@@ -114,6 +114,13 @@
 # eval "$(zoxide init --cmd cd zsh)"
 # c
 #hyfetch
-#git clone https://gitea.gurulandia.fi/Gurulandia/dotfiles.git
-git clone https://github.com/Harjanator/dotfiles.git
+echo "First Time Installation"
+DOTFILES_REPO="https://github.com/Harjanator/dotfiles.git"
+
+git clone ${DOTFILES_REPO}
 cd ~/dotfiles
+
+mkdir -p ~/.zsh
+stow .zsh -t ~/.zsh
+cp .zsh/gurulanzia.zsh  ~./zshrc
+source ~./zshrc
